@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Zen Flow Yoga Studio - Find Your Inner Zen. Flow with Us.</title>
+    <meta name="description" content="Zen Flow Yoga offers a peaceful, uplifting sanctuary for all levels to explore yoga, discover wellness, and connect with a supportive community.">
+    
+    <!-- Performance optimized CDN loading -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Advanced CDNs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        if (typeof emailjs !== 'undefined') {
+            emailjs.init("PFATyVVqB6dfozezc");
+        }
+    </script>
+    
+    <!-- SCIENTIFICALLY CALCULATED COLOR SYSTEM & CRITICAL CSS -->
+    <style>
+        :root {
+            /* Primary Color System */
+            --color-primary: #f939d6;
+            --color-secondary: #f93879;
+            --color-accent: #38f95b;
+            
+            /* Background System */
+            --color-bg: #0f172a;
+            --color-card-bg: #1e293b;
+            
+            /* Text System */
+            --color-text-primary: #f8fafc;
+            --color-text-secondary: #b0c6dd;
+            --color-text-muted: #6993be;
+            
+            /* Border System */
+            --color-border: #475569;
+            --color-border-hover: #64748b;
+            
+            /* Interactive States */
+            --color-primary-hover: #fa6ae0;
+            --color-secondary-hover: #fa699a;
+            
+            /* Status Colors */
+            --color-success: #10b981;
+            --color-warning: #f59e0b;
+            --color-error: #ef4444;
+            --color-info: #3b82f6;
+            
+            /* Design System */
+            --border-radius: 4px;
+            --font-heading: 'Nunito', sans-serif;
+            --font-body: 'Lato', sans-serif;
+        }
+        
+        /* 🎯 GUARANTEED VISIBILITY BASE STYLES */
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--color-bg) !important;
+            color: var(--color-text-primary) !important;
+            font-family: var(--font-body) !important;
+            line-height: 1.6 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow-x: hidden !important; /* Critical for Typed.js and responsive safety */
+            max-width: 100vw !important; /* Critical for Typed.js and responsive safety */
+        }
+        
+        /* 🔴 CRITICAL: BUTTON SYSTEM (ZERO TOLERANCE FOR INVISIBLE BUTTONS) */
+        .btn-primary {
+            background-color: var(--color-primary) !important;
+            color: var(--color-bg) !important;
+            border: 2px solid var(--color-primary) !important;
+            font-weight: 600 !important;
+            padding: 12px 24px !important;
+            border-radius: var(--border-radius) !important;
+            transition: all 0.2s ease !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            cursor: pointer !important;
+            font-size: 16px !important;
+            min-height: 44px !important;
+            min-width: 44px !important;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--color-primary-hover) !important;
+            border-color: var(--color-primary-hover) !important;
+            color: var(--color-bg) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+        }
+        
+        .btn-secondary {
+            background-color: transparent !important;
+            color: var(--color-primary) !important;
+            border: 2px solid var(--color-primary) !important;
+            font-weight: 600 !important;
+            padding: 12px 24px !important;
+            border-radius: var(--border-radius) !important;
+            transition: all 0.2s ease !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            cursor: pointer !important;
+            font-size: 16px !important;
+            min-height: 44px !important;
+            min-width: 44px !important;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--color-primary) !important;
+            color: var(--color-bg) !important;
+            border-color: var(--color-primary) !important;
+        }
+        
+        /* 🔴 CRITICAL: NAVIGATION SYSTEM */
+        .navbar {
+            background-color: var(--color-bg) !important;
+            border-bottom: 1px solid var(--color-border) !important;
+            backdrop-filter: blur(10px) !important;
+            padding: 16px 0 !important;
+            position: fixed !important; /* Changed from sticky to fixed as per design plan for top navigation */
+            top: 0 !important;
+            width: 100%;
+            z-index: 1000 !important;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            color: var(--color-text-primary) !important;
+            font-weight: 700 !important;
+            font-family: var(--font-heading) !important;
+            font-size: 24px !important;
+            text-decoration: none !important;
+        }
+        
+        .navbar-nav .nav-link {
+            color: var(--color-text-secondary) !important;
+            font-weight: 500 !important;
+            padding: 8px 16px !important;
+            border-radius: calc(var(--border-radius) / 2) !important;
+            transition: all 0.2s ease !important;
+            text-decoration: none !important;
+            display: block !important; /* Ensure block for mobile menu */
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--color-primary) !important;
+            background-color: var(--color-card-bg) !important;
+        }
+        
+        .navbar-toggler {
+            border: 2px solid var(--color-border) !important;
+            color: var(--color-text-primary) !important;
+            background: transparent !important;
+            padding: 8px 12px !important;
+        }
+        
+        /* 🔴 CRITICAL: FORM SYSTEM */
+        .form-control {
+            background-color: var(--color-bg) !important;
+            border: 2px solid var(--color-border) !important;
+            color: var(--color-text-primary) !important;
+            border-radius: var(--border-radius) !important;
+            padding: 12px 16px !important;
+            font-size: 16px !important;
+            width: 100% !important;
+            transition: all 0.2s ease !important;
+        }
+        
+        .form-control:focus {
+            border-color: var(--color-primary) !important;
+            box-shadow: 0 0 0 3px rgba(75, 94, 170, 0.1) !important;
+            outline: none !important;
+        }
+        
+        .form-control::placeholder {
+            color: var(--color-text-muted) !important;
+            opacity: 1 !important;
+        }
+        
+        .form-label {
+            color: var(--color-text-primary) !important;
+            font-weight: 600 !important;
+            margin-bottom: 8px !important;
+            display: block !important;
+        }
+        
+        /* 🔴 CRITICAL: CARD SYSTEM */
+        .card {
+            background-color: var(--color-card-bg) !important;
+            border: 1px solid var(--color-border) !important;
+            color: var(--color-text-primary) !important;
+            border-radius: var(--border-radius) !important;
+            transition: all 0.3s ease !important;
+            overflow: hidden !important;
+            height: 100% !important; /* MANDATORY for uniform height */
+            display: flex !important; /* MANDATORY for uniform height */
+            flex-direction: column !important; /* MANDATORY for uniform height */
+        }
+        
+        .card:hover {
+            border-color: var(--color-border-hover) !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1) !important;
+            transform: translateY(-4px) !important;
+        }
+
+        .card-body {
+            flex: 1 !important; /* MANDATORY for uniform height */
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            padding: 24px; /* Default card padding */
+        }
+        
+        .card-title {
+            color: var(--color-text-primary) !important;
+            font-family: var(--font-heading) !important;
+            font-weight: 700 !important;
+            margin-bottom: 12px !important;
+        }
+        
+        .card-text {
+            color: var(--color-text-secondary) !important;
+            line-height: 1.6 !important;
+            flex-grow: 1; /* Allows text to take up available space for equal height */
+        }
+        
+        /* Grid containers for equal heights */
+        .grid-stretch {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; /* Adjusted minmax to fit content better */
+            gap: 24px !important;
+            align-items: stretch !important;
+        }
+        
+        /* 🔴 CRITICAL: ICON SYSTEM */
+        .icon {
+            color: var(--color-primary) !important;
+            transition: color 0.2s ease !important;
+        }
+        
+        .icon:hover {
+            color: var(--color-primary-hover) !important;
+        }
+        
+        /* 🔴 CRITICAL: LINK SYSTEM */
+        a {
+            color: var(--color-primary) !important;
+            text-decoration: none !important; /* Changed to none for better design, will use active class for underline */
+            transition: all 0.2s ease !important;
+        }
+        
+        a:hover {
+            color: var(--color-primary-hover) !important;
+            text-decoration: underline !important; /* Underline on hover */
+        }
+        
+        /* 🔴 CRITICAL: HEADING HIERARCHY */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-text-primary) !important;
+            font-family: var(--font-heading) !important;
+            font-weight: 700 !important;
+            line-height: 1.2 !important;
+            margin-bottom: 16px !important;
+        }
+        
+        h1 { font-size: 3rem !important; } /* desktop: 48px */
+        h2 { font-size: 2.5rem !important; } /* desktop: 36px */
+        h3 { font-size: 2rem !important; } /* desktop: 28px */
+        h4 { font-size: 1.5rem !important; }
+        h5 { font-size: 1.25rem !important; }
+        h6 { font-size: 1rem !important; }
+        
+        /* 🔴 CRITICAL: RESPONSIVE TEXT SCALING */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.25rem !important; } /* tablet: 36px, mobile: 32px */
+            h2 { font-size: 2rem !important; } /* tablet: 28px, mobile: 24px */
+            h3 { font-size: 1.75rem !important; } /* tablet: 22px, mobile: 18px */
+            h4 { font-size: 1.25rem !important; }
+        }
+        
+        /* 🔴 CRITICAL: UTILITY CLASSES */
+        .text-primary { color: var(--color-text-primary) !important; }
+        .text-secondary { color: var(--color-text-secondary) !important; }
+        .text-muted { color: var(--color-text-muted) !important; }
+        .bg-primary { background-color: var(--color-primary) !important; }
+        .bg-card { background-color: var(--color-card-bg) !important; }
+        .border-primary { border-color: var(--color-primary) !important; }
+        
+        /* 🔴 CRITICAL: FOCUS STATES FOR ACCESSIBILITY */
+        button:focus,
+        input:focus,
+        textarea:focus,
+        select:focus,
+        a:focus {
+            outline: 2px solid var(--color-primary) !important;
+            outline-offset: 2px !important;
+        }
+        
+        /* 🔴 CRITICAL: HOVER STATES FOR INTERACTIVE ELEMENTS */
+        button,
+        .btn,
+        [role="button"] {
+            cursor: pointer !important;
+            transition: all 0.2s ease !important;
+        }
+        
+        button:hover,
+        .btn:hover,
+        [role="button"]:hover {
+            transform: translateY(-1px) !important;
+        }
+        
+        /* Swiper Styling */
+        .swiper {
+            padding: 20px 0 60px 0 !important;
+            overflow: visible !important;
+        }
+        
+        .swiper-pagination {
+            bottom: 10px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+        }
+        
+        .swiper-pagination-bullet {
+            background-color: var(--color-text-muted) !important;
+            opacity: 0.5 !important;
+            width: 10px !important;
+            height: 10px !important;
+            margin: 0 4px !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .swiper-pagination-bullet-active {
+            background-color: var(--color-primary) !important;
+            opacity: 1 !important;
+            transform: scale(1.3) !important;
+        }
+        
+        /* Swiper navigation buttons (desktop only) */
+        @media (min-width: 768px) {
+            .swiper-button-next,
+            .swiper-button-prev {
+                color: var(--color-primary) !important;
+                background-color: var(--color-bg) !important;
+                width: 44px !important;
+                height: 44px !important;
+                border-radius: 50% !important;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+                transition: all 0.3s ease !important;
+                border: 2px solid var(--color-border) !important;
+            }
+            
+            .swiper-button-next:hover,
+            .swiper-button-prev:hover {
+                background-color: var(--color-primary) !important;
+                color: var(--color-bg) !important;
+                transform: scale(1.1) !important;
+                border-color: var(--color-primary) !important;
+            }
+            
+            .swiper-button-next:after,
+            .swiper-button-prev:after {
+                font-size: 14px !important;
+                font-weight: bold !important;
+            }
+        }
+        
+        /* Hide navigation buttons on mobile */
+        @media (max-width: 767px) {
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none !important;
+            }
+            
+            .swiper-pagination {
+                bottom: 20px !important;
+            }
+        }
+        
+        /* Typed.js Styling */
+        .typed-element {
+            color: var(--color-primary) !important;
+            font-weight: 700 !important;
+            position: relative !important;
+        }
+        
+        .typed-cursor {
+            color: var(--color-primary) !important;
+            font-weight: 300 !important;
+            animation: blink 1s infinite !important;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Typed.js Layout Safety */
+        .typed-container {
+            min-width: 200px !important; /* Adjust as needed based on content */
+            overflow: hidden !important;
+            white-space: nowrap !important;
+            display: inline-block; /* Crucial for min-width to apply correctly to inline elements */
+            vertical-align: middle; /* Align with other text in line */
+        }
+
+        /* Particles.js Styling */
+        .particles-container {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: -1 !important;
+            pointer-events: none !important;
+        }
+        
+        #particles-js {
+            position: absolute !important;
+            width: 100% !important;
+            height: 100% !important;
+            background-color: transparent !important;
+        }
+        
+        /* CRITICAL: Mobile optimization - disable particles */
+        @media (max-width: 768px) {
+            .particles-container {
+                display: none !important;
+            }
+        }
+        
+        /* CRITICAL: Reduced motion accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .particles-container {
+                display: none !important;
+            }
+        }
+        
+        /* CRITICAL: Performance optimization for low-end devices */
+        @media (max-width: 1024px) and (max-height: 768px) {
+            .particles-container {
+                display: none !important;
+            }
+        }
+
+        /* 🔴 CRITICAL: MOBILE RESPONSIVENESS FIXES */
+        .mobile-menu {
+            position: fixed !important;
+            top: 64px !important;
+            right: 0 !important;
+            height: calc(100vh - 64px) !important;
+            width: 280px !important;
+            background-color: var(--color-bg) !important;
+            border-left: 1px solid var(--color-border) !important;
+            transform: translateX(100%) !important;
+            transition: transform 0.3s ease !important;
+            z-index: 999 !important;
+            overflow-y: auto !important;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0) !important;
+        }
+        
+        .hamburger {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-around !important;
+            width: 24px !important;
+            height: 24px !important;
+            background: transparent !important;
+            border: none !important;
+            cursor: pointer !important;
+            padding: 0 !important;
+        }
+        
+        .hamburger span {
+            display: block !important;
+            width: 100% !important;
+            height: 2px !important;
+            background-color: var(--color-text-primary) !important;
+            transition: all 0.3s ease !important;
+            transform-origin: center !important;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px) !important;
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0 !important;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px) !important;
+        }
+        
+        /* 🔴 CRITICAL: MOBILE TOUCH TARGETS */
+        @media (max-width: 768px) {
+            .btn-primary,
+            .btn-secondary {
+                min-height: 48px !important;
+                min-width: 48px !important;
+                padding: 16px 24px !important;
+                font-size: 16px !important;
+            }
+            
+            .nav-link {
+                padding: 16px 20px !important;
+                font-size: 16px !important;
+                display: block !important;
+                border-bottom: 1px solid var(--color-border) !important;
+            }
+            
+            .card {
+                margin-bottom: 20px !important;
+            }
+
+            .grid-stretch {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        /* 🔴 CRITICAL: MOBILE FORM FIXES */
+        @media (max-width: 768px) {
+            .form-control {
+                font-size: 16px !important;
+                padding: 16px !important;
+                min-height: 48px !important;
+            }
+            
+            textarea.form-control {
+                min-height: 120px !important;
+            }
+        }
+        /* Navbar specific styles for scroll effect */
+        .navbar.scrolled {
+            background-color: rgba(15, 23, 42, 0.98) !important; /* Slightly darker/less transparent than default */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+        }
+    </style>
+</head>
+
+<body x-data="{ mobileMenuOpen: false, showBackToTop: false }" x-init="
+    window.addEventListener('scroll', () => {
+        showBackToTop = window.scrollY > 300;
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    // For active navigation link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= sectionTop - 100 && scrollY < sectionTop + sectionHeight - 100) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#home" class="navbar-brand">Zen Flow Yoga</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8 navbar-nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#classes_pricing" class="nav-link">Classes</a>
+                    <a href="#instructors" class="nav-link">Instructors</a>
+                    <a href="#classes_pricing" class="nav-link">Pricing</a>
+                    <a href="#classes_pricing" class="nav-link">Workshops</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="hamburger" :class="{ 'active': mobileMenuOpen }" aria-label="Toggle mobile menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu md:hidden" :class="{ 'active': mobileMenuOpen }">
+            <div class="px-4 py-2 navbar-nav">
+                <a href="#home" @click="mobileMenuOpen = false" class="nav-link block">Home</a>
+                <a href="#about" @click="mobileMenuOpen = false" class="nav-link block">About Us</a>
+                <a href="#classes_pricing" @click="mobileMenuOpen = false" class="nav-link block">Classes</a>
+                <a href="#instructors" @click="mobileMenuOpen = false" class="nav-link block">Instructors</a>
+                <a href="#classes_pricing" @click="mobileMenuOpen = false" class="nav-link block">Pricing</a>
+                <a href="#classes_pricing" @click="mobileMenuOpen = false" class="nav-link block">Workshops</a>
+                <a href="#contact" @click="mobileMenuOpen = false" class="nav-link block">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <div class="particles-container"></div> <!-- Particles.js will render here -->
+        
+        <!-- Background Image/Video -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=600&fit=crop&crop=center" 
+                 alt="Serene yoga studio setting with warm light" 
+                 class="w-full h-full object-cover"
+                 loading="eager"
+                 onerror="this.alt='Image failed to load - using real Unsplash photo'"
+                 style="transform: scale(1.05);"> <!-- Subtle zoom effect -->
+            <div class="absolute inset-0 bg-black opacity-60"></div> <!-- Overlay for text readability -->
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-primary">
+                    Find Your Inner Zen. <span class="typed-container"><span id="typed-text" class="typed-element"></span></span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-secondary font-body">
+                    Zen Flow Yoga offers a peaceful, uplifting sanctuary for all levels to explore yoga, discover wellness, and connect with a supportive community.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#classes_pricing" class="btn-primary" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        View Class Schedule
+                    </a>
+                    <a href="#contact" class="btn-secondary" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-hand-holding-heart mr-2"></i>
+                        Book a Private Session
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20" style="background-color: var(--color-bg);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">Our Philosophy & Story</h2>
+                <p class="text-xl max-w-3xl mx-auto text-secondary">
+                    Discover the heart of Zen Flow Yoga and what makes us a unique wellness sanctuary.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1687783615494-b4a1f1af8b58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NjE0MzF8MHwxfHNlYXJjaHwzfHx0cmFucXVpbCUyMHlvZ2ElMjBzdHVkaW98ZW58MHx8fHwxNzQ5NjQ3ODk4fDA&ixlib=rb-4.1.0&q=80&w=1080&w=500&h=500&fit=crop&crop=center" 
+                         alt="Zen Flow Yoga Studio interior, peaceful setting" 
+                         class="rounded-xl shadow-2xl w-full max-w-md mx-auto hover:scale-105 transition-transform" 
+                         loading="lazy"
+                         style="border-radius: var(--border-radius);">
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-6 text-primary">Why Choose Zen Flow Yoga?</h3>
+                    <p class="mb-6 leading-relaxed text-secondary">
+                        At Zen Flow Yoga, we believe that yoga is for every body. Our journey began with a simple vision: to create a welcoming space where individuals of all skill levels can find their center, strengthen their bodies, and calm their minds. We foster a supportive community, offering a diverse range of classes from gentle restorative sessions to dynamic vinyasa flows.
+                    </p>
+                    <p class="mb-6 leading-relaxed text-secondary">
+                        Our commitment extends beyond the mat. We emphasize holistic wellness, mindful movement, and personalized attention. Our highly experienced instructors are dedicated to guiding you safely and inspiring your personal growth. Come discover your balance, boost your energy, and connect with a community that cares.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-secondary">
+                        <li>Inclusive environment for all ages and levels</li>
+                        <li>Highly qualified and compassionate instructors</li>
+                        <li>Diverse range of class offerings and workshops</li>
+                        <li>Focus on holistic wellness and mindfulness</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Instructors Section (replaces Portfolio) -->
+    <section id="instructors" class="py-20" style="background-color: var(--color-card-bg);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">Meet Our Inspiring Instructors</h2>
+                <p class="text-xl max-w-3xl mx-auto text-secondary">
+                    Dedicated and passionate guides on your yoga journey.
+                </p>
+            </div>
+            
+            <div class="swiper instructors-swiper" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card hover:border-primary" style="border-radius: var(--border-radius);">
+                            <img src="https://images.unsplash.com/photo-1717821681365-36b0da044a75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NjE0MzF8MHwxfHNlYXJjaHw2fHx5b2dhJTIwaW5zdHJ1Y3RvcnxlbnwwfHx8fDE3NDk2NDc4OTh8MA&ixlib=rb-4.1.0&q=80&w=1080&w=600&h=400&fit=crop&crop=center" 
+                                 alt="Yoga Instructor Sarah Chen" class="w-full h-64 object-cover rounded-t-sm mb-4" 
+                                 loading="lazy"
+                                 style="border-top-left-radius: var(--border-radius); border-top-right-radius: var(--border-radius);">
+                            <div class="card-body">
+                                <h3 class="card-title text-xl">Sarah Chen</h3>
+                                <p class="card-text text-secondary">Specialty: Vinyasa Flow & Mindfulness. "Find balance in every breath."</p>
+                                <a href="#" class="btn-secondary mt-4 w-full">View Bio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card hover:border-primary" style="border-radius: var(--border-radius);">
+                            <img src="https://images.unsplash.com/photo-1582106316415-d02d4d0e9066?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NjE0MzF8MHwxfHNlYXJjaHw2fHx0ZWFjaGluZSUyMHlvZ2ElMjBjbGFzc3xlbnwwfHx8fDE3NDk2NDc4OTh8MA&ixlib=rb-4.1.0&q=80&w=1080&w=600&h=400&fit=crop&crop=center" 
+                                 alt="Yoga Instructor David Lee" class="w-full h-64 object-cover rounded-t-sm mb-4" 
+                                 loading="lazy"
+                                 style="border-top-left-radius: var(--border-radius); border-top-right-radius: var(--border-radius);">
+                            <div class="card-body">
+                                <h3 class="card-title text-xl">David Lee</h3>
+                                <p class="card-text text-secondary">Specialty: Ashtanga & Power Yoga. "Challenge your limits, discover your strength."</p>
+                                <a href="#" class="btn-secondary mt-4 w-full">View Bio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card hover:border-primary" style="border-radius: var(--border-radius);">
+                            <img src="https://images.unsplash.com/photo-1696884861086-ef5dc86e5fed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NjE0MzF8MHwxfHNlYXJjaHw1fHxwcml2YXRlJTIweW9nYSUyMHNlc3Npb258ZW58MHx8fHwxNzQ5NjQ3ODk4fDA&ixlib=rb-4.1.0&q=80&w=1080&w=600&h=400&fit=crop&crop=center" 
+                                 alt="Yoga Instructor Maya Patel" class="w-full h-64 object-cover rounded-t-sm mb-4" 
+                                 loading="lazy"
+                                 style="border-top-left-radius: var(--border-radius); border-top-right-radius: var(--border-radius);">
+                            <div class="card-body">
+                                <h3 class="card-title text-xl">Maya Patel</h3>
+                                <p class="card-text text-secondary">Specialty: Restorative & Prenatal Yoga. "Nurture your body and soul with gentle care."</p>
+                                <a href="#" class="btn-secondary mt-4 w-full">View Bio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Schedule & Pricing Section (replaces Services) -->
+    <section id="classes_pricing" class="py-20" style="background-color: var(--color-bg);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">Classes, Pricing & Workshops</h2>
+                <p class="text-xl max-w-3xl mx-auto text-secondary">
+                    Explore our diverse offerings designed for every step of your wellness journey.
+                </p>
+            </div>
+            
+            <!-- Class Schedule Sub-section -->
+            <h3 class="text-2xl font-bold mb-8 text-primary text-center" data-aos="fade-up">Our Class Schedule</h3>
+            <div class="grid-stretch mb-16">
+                <div class="card p-6" data-aos="fade-up" data-aos-delay="100" style="border-radius: var(--border-radius);">
+                    <div class="card-body">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="card-title text-xl mb-0">Morning Vinyasa Flow</h4>
+                            <span class="text-sm font-semibold text-primary px-3 py-1 rounded-full" style="background: rgba(var(--color-primary-rgb, 249, 57, 214), 0.1);">All Levels</span>
+                        </div>
+                        <p class="card-text text-secondary mb-4">A dynamic and energizing flow to kickstart your day, connecting breath with movement.</p>
+                        <ul class="text-secondary text-sm space-y-2 mb-4">
+                            <li><i class="fas fa-calendar-alt text-muted mr-2"></i>Mon, Wed, Fri</li>
+                            <li><i class="fas fa-clock text-muted mr-2"></i>7:00 AM - 8:00 AM</li>
+                            <li><i class="fas fa-user-tie text-muted mr-2"></i>Instructor: Sarah Chen</li>
+                        </ul>
+                        <a href="#" class="btn-primary w-full text-center">Sign Up</a>
+                    </div>
+                </div>
+                
+                <div class="card p-6" data-aos="fade-up" data-aos-delay="200" style="border-radius: var(--border-radius);">
+                    <div class="card-body">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="card-title text-xl mb-0">Restorative Yoga</h4>
+                            <span class="text-sm font-semibold text-accent px-3 py-1 rounded-full" style="background: rgba(var(--color-accent-rgb, 56, 249, 91), 0.1);">Beginner Friendly</span>
+                        </div>
+                        <p class="card-text text-secondary mb-4">Gentle poses with props to promote deep relaxation and stress relief.</p>
+                        <ul class="text-secondary text-sm space-y-2 mb-4">
+                            <li><i class="fas fa-calendar-alt text-muted mr-2"></i>Tue, Thu</li>
+                            <li><i class="fas fa-clock text-muted mr-2"></i>6:00 PM - 7:00 PM</li>
+                            <li><i class="fas fa-user-tie text-muted mr-2"></i>Instructor: Maya Patel</li>
+                        </ul>
+                        <a href="#" class="btn-primary w-full text-center">Sign Up</a>
+                    </div>
+                </div>
+                
+                <div class="card p-6" data-aos="fade-up" data-aos-delay="300" style="border-radius: var(--border-radius);">
+                    <div class="card-body">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="card-title text-xl mb-0">Power Yoga</h4>
+                            <span class="text-sm font-semibold text-secondary px-3 py-1 rounded-full" style="background: rgba(var(--color-secondary-rgb, 249, 56, 121), 0.1);">Advanced</span>
+                        </div>
+                        <p class="card-text text-secondary mb-4">An intense, fast-paced practice to build strength, stamina, and flexibility.</p>
+                        <ul class="text-secondary text-sm space-y-2 mb-4">
+                            <li><i class="fas fa-calendar-alt text-muted mr-2"></i>Sat</li>
+                            <li><i class="fas fa-clock text-muted mr-2"></i>9:00 AM - 10:30 AM</li>
+                            <li><i class="fas fa-user-tie text-muted mr-2"></i>Instructor: David Lee</li>
+                        </ul>
+                        <a href="#" class="btn-primary w-full text-center">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pricing Sub-section -->
+            <h3 class="text-2xl font-bold mb-8 text-primary text-center" data-aos="fade-up">Flexible Pricing Options</h3>
+            <div class="grid-stretch mb-16">
+                <div class="card p-6 text-center" data-aos="fade-up" data-aos-delay="100" style="border-radius: var(--border-radius);">
+                    <div class="card-body">
+                        <h4 class="card-title text-2xl mb-2">Drop-in Class</h4>
+                        <p class="text-5xl font-bold text-primary mb-4">$25</p>
+                        <p class="card-text text-secondary mb-6">Experience a single class.</p>
+                        <ul class="text-secondary text-sm space-y-2 mb-6">
+                            <li><i class="fas fa-check-circle icon mr-2"></i>Access to any group class</li>
+                            <li><i class="fas fa-times-circle text-muted mr-2"></i>No commitment</li>
+                        </ul>
+                        <a href="#" class="btn-primary w-full mt-auto">Purchase Now</a>
+                    </div>
+                </div>
+                
+                <div class="card p-6 text-center" data-aos="fade-up" data-aos-delay="200" style="border-radius: var(--border-radius);">
+                    <div class="card-body">
+                        <h4 class="card-title text-2xl mb-2">5-Class Pack</h4>
+                        <p class="text-5xl font-bold text-primary mb-4">$100</p>
+                        <p class="card-text text-secondary mb-6">Save per class with a pack.</p>
+                        <ul class="text-secondary text-sm space-y-2 mb-6">
+                            <li><i class="fas fa-check-circle icon mr-2"></i>5 group classes</li>
+                            <li><i class="fas fa-check-circle icon mr-2"></i>Valid for 3 months</li>
+                        </ul>
+                        <a href="#" class="btn-primary w-full mt-auto">Purchase Now</a>
+                    </div>
+                </div>
+                
+                <div class="card p-6 text-center" data-aos="fade-up" data-aos-delay="300" style="border-radius: var(--border-radius);">
+                    <div class="card-body">
+                        <h4 class="card-title text-2xl mb-2">Monthly Unlimited</h4>
+                        <p class="text-5xl font-bold text-primary mb-4">$150</p>
+                        <p class="card-text text-secondary mb-6">Practice as much as you like!</p>
+                        <ul class="text-secondary text-sm space-y-2 mb-6">
+                            <li><i class="fas fa-check-circle icon mr-2"></i>Unlimited group classes</li>
+                            <li><i class="fas fa-check-circle icon mr-2"></i>Access to online library</li>
+                        </ul>
+                        <a href="#" class="btn-primary w-full mt-auto">Purchase Now</a>
+                    </div>
+                </div>
+                
+                <div class="card p-6 text-center" data-aos="fade-up" data-aos-delay="400" style="border-radius: var(--border-radius);">
+                    <div class="card-body">
+                        <h4 class="card-title text-2xl mb-2">Private Session</h4>
+                        <p class="text-5xl font-bold text-primary mb-4">$90</p>
+                        <p class="card-text text-secondary mb-6">Personalized one-on-one guidance.</p>
+                        <ul class="text-secondary text-sm space-y-2 mb-6">
+                            <li><i class="fas fa-check-circle icon mr-2"></i>60-minute session</li>
+                            <li><i class="fas fa-check-circle icon mr-2"></i>Tailored to your needs</li>
+                        </ul>
+                        <a href="#" class="btn-primary w-full mt-auto">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshops Sub-section -->
+            <h3 class="text-2xl font-bold mb-8 text-primary text-center" data-aos="fade-up">Upcoming Workshops</h3>
+            <div class="grid-stretch">
+                <div class="card p-6" data-aos="fade-up" data-aos-delay="100" style="border-radius: var(--border-radius);">
+                    <img src="https://images.unsplash.com/photo-1517637382994-f02da38c6728?w=600&h=300&fit=crop&auto=format" 
+                         alt="Yoga Workshop on Deep Stretching" class="w-full h-48 object-cover rounded-t-sm mb-4" 
+                         loading="lazy"
+                         style="border-top-left-radius: var(--border-radius); border-top-right-radius: var(--border-radius);">
+                    <div class="card-body">
+                        <h4 class="card-title text-xl">Deep Stretching & Flexibility</h4>
+                        <p class="card-text text-secondary mb-4">Explore advanced stretches to increase your range of motion and flexibility.</p>
+                        <ul class="text-secondary text-sm space-y-2 mb-4">
+                            <li><i class="fas fa-calendar-alt text-muted mr-2"></i>Oct 26, 2024</li>
+                            <li><i class="fas fa-clock text-muted mr-2"></i>2:00 PM - 4:00 PM</li>
+                            <li><i class="fas fa-dollar-sign text-muted mr-2"></i>$45</li>
+                        </ul>
+                        <a href="#" class="btn-primary w-full mt-auto">Learn More & Register</a>
+                    </div>
+                </div>
+                
+                <div class="card p-6" data-aos="fade-up" data-aos-delay="200" style="border-radius: var(--border-radius);">
+                    <img src="https://images.unsplash.com/photo-1566791097164-7959a5a50fd3?w=800&h=500&fit=crop&auto=format" 
+                         alt="Meditation Workshop" class="w-full h-48 object-cover rounded-t-sm mb-4" 
+                         loading="lazy"
+                         style="border-top-left-radius: var(--border-radius); border-top-right-radius: var(--border-radius);">
+                    <div class="card-body">
+                        <h4 class="card-title text-xl">Introduction to Meditation</h4>
+                        <p class="card-text text-secondary mb-4">Learn foundational meditation techniques to calm the mind and reduce stress.</p>
+                        <ul class="text-secondary text-sm space-y-2 mb-4">
+                            <li><i class="fas fa-calendar-alt text-muted mr-2"></i>Nov 9, 2024</li>
+                            <li><i class="fas fa-clock text-muted mr-2"></i>10:00 AM - 12:00 PM</li>
+                            <li><i class="fas fa-dollar-sign text-muted mr-2"></i>$35</li>
+                        </ul>
+                        <a href="#" class="btn-primary w-full mt-auto">Learn More & Register</a>
+                    </div>
+                </div>
+
+                <div class="card p-6" data-aos="fade-up" data-aos-delay="300" style="border-radius: var(--border-radius);">
+                    <img src="https://images.unsplash.com/photo-1549493522-261546258908?q=80&w=1080&h=600&fit=crop&auto=format" 
+                         alt="Arm Balance Workshop" class="w-full h-48 object-cover rounded-t-sm mb-4" 
+                         loading="lazy"
+                         style="border-top-left-radius: var(--border-radius); border-top-right-radius: var(--border-radius);">
+                    <div class="card-body">
+                        <h4 class="card-title text-xl">Arm Balance Fundamentals</h4>
+                        <p class="card-text text-secondary mb-4">Demystify arm balances with step-by-step guidance and build core strength.</p>
+                        <ul class="text-secondary text-sm space-y-2 mb-4">
+                            <li><i class="fas fa-calendar-alt text-muted mr-2"></i>Nov 23, 2024</li>
+                            <li><i class="fas fa-clock text-muted mr-2"></i>1:00 PM - 3:00 PM</li>
+                            <li><i class="fas fa-dollar-sign text-muted mr-2"></i>$50</li>
+                        </ul>
+                        <a href="#" class="btn-primary w-full mt-auto">Learn More & Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1593964796002-ea7d8e999537?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NjE0MzF8MHwxfHNlYXJjaHwxMHx8cGVhY2VmdWwlMjBzdHVkaW8lMjBlbnRyYW5jZXxlbnwwfHx8fDE3NDk2NDc4OTh8MA&ixlib=rb-4.1.0&q=80&w=1080&w=600&h=300&fit=crop&crop=center" 
+                 alt="Zen Flow Yoga Studio entrance with a calming atmosphere" 
+                 class="w-full h-full object-cover"
+                 loading="lazy"
+                 onerror="this.alt='Image failed to load - using real Unsplash photo'">
+            <div class="absolute inset-0 bg-gradient-to-r from-color-bg/90 to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">Get In Touch</h2>
+                <p class="text-xl max-w-3xl mx-auto text-secondary">
+                    Have questions? We're here to help you find your perfect path.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-8 text-primary">Connect With Us</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: rgba(var(--color-primary-rgb, 249, 57, 214), 0.1);">
+                                <i class="fas fa-envelope icon"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary">Email</h4>
+                                <p class="text-secondary">info@zenflowyoga.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: rgba(var(--color-primary-rgb, 249, 57, 214), 0.1);">
+                                <i class="fas fa-phone icon"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary">Phone</h4>
+                                <p class="text-secondary">+1 (123) 456-7890</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: rgba(var(--color-primary-rgb, 249, 57, 214), 0.1);">
+                                <i class="fas fa-map-marker-alt icon"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary">Studio Location</h4>
+                                <p class="text-secondary">123 Wellness Way, Serenity City, CA 90210</p>
+                            </div>
+                        </div>
+                        <!-- Google Map -->
+                        <div class="w-full h-64 bg-color-card-bg rounded-lg overflow-hidden" style="border-radius: var(--border-radius);">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.205739327889!2d-122.41941578468165!3d37.7749294797597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858087e9124403%3A0x6d2c4974f1c9d2f!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1678888888888!5m2!1sen!2sus" 
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                title="Zen Flow Yoga Studio Location">
+                            </iframe>
+                        </div>
+                        <!-- Social Media Icons -->
+                        <div class="flex space-x-4 mt-6">
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-all" style="background: var(--color-card-bg); color: var(--color-text-muted);" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-all" style="background: var(--color-card-bg); color: var(--color-text-muted);" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-all" style="background: var(--color-card-bg); color: var(--color-text-muted);" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div data-aos="fade-left">
+                    <div class="card p-6" style="border-radius: var(--border-radius);">
+                        <h3 class="card-title text-xl mb-6">Send Us a Message</h3>
+                        
+                        <form id="emailjs-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="field">
+                                    <label for="name" class="form-label">
+                                        <i class="fas fa-user mr-2"></i>Name
+                                    </label>
+                                    <input type="text" name="name" id="name" required class="form-control" placeholder="Your Name" style="border-radius: var(--border-radius);">
+                                </div>
+                                <div class="field">
+                                    <label for="email" class="form-label">
+                                        <i class="fas fa-envelope mr-2"></i>Email
+                                    </label>
+                                    <input type="email" name="email" id="email" required class="form-control" placeholder="your@email.com" style="border-radius: var(--border-radius);">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="subject" class="form-label">
+                                    <i class="fas fa-tag mr-2"></i>Subject
+                                </label>
+                                <input type="text" name="subject" id="subject" required class="form-control" placeholder="Class Inquiry" style="border-radius: var(--border-radius);">
+                            </div>
+                            <div class="field">
+                                <label for="message" class="form-label">
+                                    <i class="fas fa-comment mr-2"></i>Message
+                                </label>
+                                <textarea name="message" id="message" required rows="5" class="form-control" placeholder="Tell us about your inquiry..." style="border-radius: var(--border-radius);"></textarea>
+                            </div>
+                            
+                            <div class="field hidden">
+                                <input type="hidden" name="to_email" id="to_email" value="mustafang4858@gmail.com">
+                            </div>
+                            
+                            <button type="submit" id="contact-btn" class="btn-primary w-full" style="border-radius: var(--border-radius);">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Message
+                            </button>
+                            
+                            <div id="success-message" class="hidden text-center py-3 rounded-lg" style="color: var(--color-success); background: rgba(var(--color-success-rgb, 16, 185, 129), 0.1); border-radius: var(--border-radius);">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                Message sent successfully! We'll get back to you soon.
+                            </div>
+                            <div id="error-message" class="hidden text-center py-3 rounded-lg" style="color: var(--color-error); background: rgba(var(--color-error-rgb, 239, 68, 68), 0.1); border-radius: var(--border-radius);">
+                                <i class="fas fa-exclamation-circle mr-2"></i>
+                                <span id="error-text">Failed to send message. Please try again.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12" style="background-color: var(--color-bg); border-top: 1px solid var(--color-border);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="text-2xl font-bold mb-4 navbar-brand" style="color: var(--color-primary);">Zen Flow Yoga</div>
+                    <p class="mb-6 max-w-md text-secondary">
+                        Creating a peaceful, uplifting space for all levels to explore yoga, discover wellness, and connect with a supportive community.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-all" style="background: var(--color-card-bg); color: var(--color-text-muted); border-radius: var(--border-radius);" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-all" style="background: var(--color-card-bg); color: var(--color-text-muted); border-radius: var(--border-radius);" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-all" style="background: var(--color-card-bg); color: var(--color-text-muted); border-radius: var(--border-radius);" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4 text-primary">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="transition-colors text-secondary" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-secondary)'">Home</a></li>
+                        <li><a href="#about" class="transition-colors text-secondary" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-secondary)'">About Us</a></li>
+                        <li><a href="#classes_pricing" class="transition-colors text-secondary" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-secondary)'">Classes & Pricing</a></li>
+                        <li><a href="#instructors" class="transition-colors text-secondary" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-secondary)'">Instructors</a></li>
+                        <li><a href="#contact" class="transition-colors text-secondary" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-secondary)'">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4 text-primary">Our Offerings</h3>
+                    <ul class="space-y-2 text-secondary">
+                        <li>Group Classes</li>
+                        <li>Private Sessions</li>
+                        <li>Workshops & Events</li>
+                        <li>Online Resources</li>
+                        <li>Teacher Training</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 text-center" style="border-top: 1px solid var(--color-border); color: var(--color-text-muted);">
+                <p>&copy; 2023 Zen Flow Yoga. All rights reserved. Designed with tranquility.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button 
+        x-show="showBackToTop" 
+        @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 transform scale-90"
+        x-transition:enter-end="opacity-100 transform scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 transform scale-100"
+        x-transition:leave-end="opacity-0 transform scale-90"
+        class="fixed bottom-8 right-8 p-3 rounded-full shadow-lg transition-all z-40"
+        style="background: var(--color-primary); color: var(--color-bg);"
+        onmouseover="this.style.transform='scale(1.1)'"
+        onmouseout="this.style.transform='scale(1)'"
+        aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript CDNs (EXACT ORDER) -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+    <!-- Only load particles on desktop and if not prefers-reduced-motion -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.innerWidth > 768 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                const particlesContainer = document.querySelector('.particles-container');
+                if (particlesContainer) {
+                    particlesContainer.id = 'particles-js'; // Assign ID for Particles.js to initialize
+                    const script = document.createElement('script');
+                    script.src = 'https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js';
+                    script.onload = () => {
+                        if (typeof particlesJS !== 'undefined') {
+                            particlesJS('particles-js', {
+                                particles: {
+                                    number: { value: 50, density: { enable: true, value_area: 800 } },
+                                    color: { value: 'rgb(249, 57, 214)' }, /* Use RGB for Particles.js, derived from --color-primary */
+                                    shape: { type: 'circle', stroke: { width: 0, color: '#000000' } },
+                                    opacity: { value: 0.3, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
+                                    size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.1, sync: false } },
+                                    line_linked: { enable: true, distance: 150, color: 'rgb(249, 57, 214)', opacity: 0.2, width: 1 },
+                                    move: { enable: true, speed: 1, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+                                },
+                                interactivity: {
+                                    detect_on: 'canvas',
+                                    events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                                    modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+                                },
+                                retina_detect: true
+                            });
+                        }
+                    };
+                    document.body.appendChild(script);
+                }
+            }
+        });
+    </script>
+    
+    <!-- Initialize everything -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 600,
+                easing: 'ease-out',
+                once: true,
+                offset: 50,
+                disable: function() {
+                    return window.innerWidth < 768 || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                }
+            });
+            
+            // Initialize Typed.js for Hero Section
+            const typedElement = document.getElementById('typed-text');
+            if (typedElement) {
+                new Typed('#typed-text', {
+                    strings: [
+                        'Flow with Us.',
+                        'Find Balance.',
+                        'Discover Wellness.',
+                        'Connect.'
+                    ],
+                    typeSpeed: 80,
+                    backSpeed: 50,
+                    backDelay: 2000,
+                    startDelay: 500,
+                    loop: true,
+                    showCursor: true,
+                    cursorChar: '|',
+                    autoInsertCss: true, // Let Typed.js handle basic cursor CSS
+                });
+            }
+            
+            // Initialize Instructors Swiper
+            const instructorsSwiper = new Swiper('.instructors-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    320: { slidesPerView: 1, spaceBetween: 15 },
+                    640: { slidesPerView: 2, spaceBetween: 20 },
+                    1024: { slidesPerView: 3, spaceBetween: 30 },
+                },
+                effect: 'slide',
+                speed: 600,
+                touchRatio: 1,
+                threshold: 5,
+                allowTouchMove: true,
+                preventInteractionOnTransition: false,
+                watchOverflow: true,
+                centerInsufficientSlides: true,
+            });
+            
+            // EmailJS Contact Form
+            const form = document.getElementById('emailjs-form');
+            const btn = document.getElementById('contact-btn');
+            const successMsg = document.getElementById('success-message');
+            const errorMsg = document.getElementById('error-message');
+            const errorText = document.getElementById('error-text');
+            
+            if (form && btn) {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    btn.disabled = true;
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+                    
+                    successMsg.classList.add('hidden');
+                    errorMsg.classList.add('hidden');
+                    
+                    const serviceID = 'service_d1ikm0r';
+                    const templateID = 'template_y6yjh3h';
+                    
+                    emailjs.sendForm(serviceID, templateID, form)
+                        .then(function(response) {
+                            successMsg.classList.remove('hidden');
+                            form.reset();
+                            btn.disabled = false;
+                            btn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Send Message';
+                            setTimeout(() => successMsg.classList.add('hidden'), 5000);
+                        }, function(error) {
+                            let errorMessage = 'Failed to send message. Please try again.';
+                            if (error.status === 422) errorMessage = 'Invalid template or service configuration.';
+                            else if (error.status === 412) errorMessage = 'Email service authentication error.';
+                            else if (error.status === 400) errorMessage = 'Invalid request. Please check your inputs.';
+                            
+                            errorText.textContent = errorMessage;
+                            errorMsg.classList.remove('hidden');
+                            btn.disabled = false;
+                            btn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Send Message';
+                        });
+                });
+            }
+            
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        const offset = document.querySelector('.navbar').offsetHeight; // Account for fixed navbar height
+                        window.scrollTo({
+                            top: target.offsetTop - offset,
+                            behavior: 'smooth'
+                        });
+                        // Close mobile menu if open
+                        if (window.Alpine) {
+                            Alpine.store('mobileMenuOpen', false);
+                        }
+                    }
+                });
+            });
+
+            // Mobile menu close on outside click (Alpine.js integration)
+            document.addEventListener('click', function(event) {
+                const navbar = document.querySelector('.navbar');
+                const hamburger = document.querySelector('.hamburger');
+                const mobileMenu = document.querySelector('.mobile-menu');
+
+                // Check if the click is outside the navbar and mobile menu
+                if (!navbar.contains(event.target) && !mobileMenu.contains(event.target) && !hamburger.contains(event.target)) {
+                    if (window.Alpine && mobileMenu.classList.contains('active')) {
+                        document.body.setAttribute('x-data', JSON.stringify({ mobileMenuOpen: false }));
+                        // Re-initialize Alpine.js data if needed, or trigger Alpine.js directly
+                        Alpine.raw(document.body).mobileMenuOpen = false; // Directly set Alpine state
+                    }
+                }
+            });
+
+            // Prevent zoom on input focus (iOS fix)
+            document.querySelectorAll('input, textarea, select').forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    if (window.innerWidth < 768 && element.style.fontSize !== '16px') { // Only apply for small screens
+                        element.style.fontSize = '16px'; // Set to 16px to prevent iOS zoom
+                    }
+                });
+            });
+
+            // Fix for iOS smooth scrolling (Safari doesn't support scroll-padding-top)
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+        });
+    </script>
+</body>
+</html>
